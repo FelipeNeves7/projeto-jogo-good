@@ -1,0 +1,381 @@
+/* ------- RESET CSS ------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --footer: #0B0B0B;
+    --preto: #212529;
+    --laranja: #FF8105;
+    --cinza: #E9ECEF;
+    --verde: #054B30;
+    --vermelho: #660202;
+}
+
+.container-grid {
+    width: 78%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url(./Img/FundoSite.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ------- MENU ------- */
+header {
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 240px;
+}
+
+.menu {
+    max-width: 900px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--laranja);
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    background: var(--laranja);
+    color: #FFFFFF;
+
+    padding: 12px 24px;
+    border-radius: 6px;
+
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    box-shadow: 0 0 12px rgba(255, 129, 5, 0.4);
+}
+
+.btn-login:hover {
+    box-shadow: 0 0 20px rgba(255, 129, 5, 0.8);
+    transform: translateY(-3px);
+}
+
+.jogo-texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 95px;
+}
+
+.jogo .titulo-secao {
+    position: relative;
+    width: 285px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 48px;
+    border: 2px solid #FFFFFF;
+}
+
+.jogo .titulo-secao span {
+    font-family: "Poppins", sans-serif;
+    font-size: 29px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* ------- COMO FIZ OS QUADRADOS LARANJAS ------- */
+.jogo .titulo-secao::before,
+.jogo .titulo-secao::after,
+.jogo .titulo-secao span::before,
+.jogo .titulo-secao span::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--laranja);
+}
+
+.jogo .titulo-secao::before {
+    top: -9px;
+    left: -9px;
+}
+
+.jogo .titulo-secao::after {
+    top: -9px;
+    right: -9px;
+}
+
+.jogo .titulo-secao span::before {
+    bottom: -9px;
+    left: -9px;
+}
+
+.jogo .titulo-secao span::after {
+    bottom: -9px;
+    right: -9px;
+}
+
+.jogo h1 {
+    margin-top: 25px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(50px, 4.2vw, 72px);
+    line-height: 1.2;
+
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+}
+
+.jogo h1 span {
+    color: var(--laranja);
+    font-weight: 500;
+}
+
+.jogo-texto>p {
+    width: 80%;
+    max-width: 570px;
+    margin-top: 40px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.jogo-texto>p strong {
+    font-weight: 600;
+}
+
+.construct {
+    margin-top: 150px;
+    height: 560px;
+    width: 100%;
+
+    margin-bottom: 80px;
+    border-radius: 28px;
+
+    overflow: hidden;
+    border: 2px solid var(--laranja);
+
+    box-shadow:
+        0 0 60px rgba(255, 129, 5, 0.5);
+
+    background: #000000;
+}
+
+.botoes-pergunta {
+    margin-top: 35px;
+    margin-bottom: 120px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-sair,
+.btn-avancar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    width: 170px;
+    height: 60px;
+
+    border-radius: 6px;
+    border: 2px solid #FFFFFF;
+
+    color: #FFFFFF;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    
+    transition:
+        0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-sair {
+    background: var(--vermelho);
+
+    box-shadow:
+        0 0 12px rgba(102, 2, 2, 0.5);
+}
+
+.btn-avancar {
+    background: var(--verde);
+
+    box-shadow:
+        0 0 12px rgba(5, 75, 48, 0.5);
+}
+
+.btn-sair:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.2),
+        0 0 22px rgba(255, 255, 255, 0.8);
+}
+
+.btn-avancar:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.2),
+        0 0 22px rgba(255, 255, 255, 0.8);
+}
+
+.btn-sair:active,
+.btn-avancar:active {
+    transform: scale(0.97);
+}
+
+
+/* ------- FOOTER ------- */
+footer {
+    background-color: #0B0B0B;
+    padding: 50px 0;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.roda-pe {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.logo-footer {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.logo-footer p {
+    margin-top: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.titulo-footer {
+    font-family: "Poppins", sans-serif;
+    color: var(--laranja);
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navegacao-footer ul li::marker {
+    color: #FF8105;
+}
+
+.navegacao-footer li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navegacao-footer li:hover {
+    color: #FFFFFF;
+}
+
+.item-contato {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.item-contato svg {
+    width: 30px;
+    height: 30px;
+    color: var(--laranja);
+}
+
+.social {
+    margin-top: 25px;
+    display: flex;
+    gap: 35px;
+}
+
+.social svg {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    fill: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+.social svg:hover {
+    fill: var(--laranja);
+}
+
+.copy {
+    margin-top: 70px;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    opacity: 0.9;
+    text-align: center;
+}

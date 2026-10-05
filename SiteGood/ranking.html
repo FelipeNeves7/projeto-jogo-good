@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking | Agência Good</title>
+    <link rel="shortcut icon" href="./Svg/Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="ranking.css">
+    <script src="ranking.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ------- MENU ------- -->
+    <header class="container-grid">
+        <img src="./Svg/Logo.svg" alt="Logo Agência Good">
+
+        <nav class="menu">
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Jogo</a>
+            <a href="#">Feedback</a>
+            <a href="#">Contato</a>
+        </nav>
+
+        <div class="btn-login">
+            <p>Login</p>
+        </div>
+    </header>
+
+    <!-- ------- RANKING ------- -->
+    <section class="ranking">
+        <div class="ranking-texto">
+
+            <div class="titulo-secao">
+                <span>Ranking</span>
+            </div>
+
+            <h1>
+                Em quanto tempo<br>
+                <span>você conseguiu?</span>
+            </h1>
+
+            <p>
+                Confira sua <strong>posição no ranking</strong> e veja como
+                <strong>seu tempo</strong> se compara ao de outros jogadores.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ------- PLACAR ------- -->
+    <section class="ranking-placar container-grid">
+        <h2>🏆 TOP 10 MELHORES TEMPOS</h2>
+
+        <div class="placar-container">
+            <div id="placar-corpo" class="leaderboard-list">
+
+                <div class="mensagem-placar">
+                    Carregando tempos...
+                </div>
+
+            </div>
+
+            <div class="botoes-placar">
+
+                <button id="botao-atualizar" class="botao-atualizar" type="button">
+                   🔄 Atualizar Placar
+                </button>
+
+                <a href="index.html" class="botao-inicio">
+                    Voltar ao ínicio
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
